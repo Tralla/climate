@@ -7,7 +7,7 @@ blueprint:
     time_to_set:
       name: Time
       description: When should the temperature be set
-      default: 23:00:00
+      default: "23:00:00"
       selector:
         time: {}
     climate_entity:
