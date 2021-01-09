@@ -1,5 +1,5 @@
 blueprint:
-  name: Set thermostat temperature at specific time
+  name: Heating - Set thermostat temperature at specific time
   description: Sets a climate entity to a specifc temperature at a set time everyday. 
   domain: automation
   source_url: https://github.com/Tralla/climate/Set_Climate_time.yaml
