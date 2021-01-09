@@ -1,5 +1,5 @@
 blueprint:
-  name: Heating Control 3p
+  name: Heating - Control 3p
   description: Control your heating with options for person home, if temp is below
     a specific value, set temp, and heating between specific times.
   domain: automation
