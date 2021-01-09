@@ -1,0 +1,39 @@
+blueprint:
+  name: Set thermostat temperature at specific time
+  description: Sets a climate entity to a specifc temperature at a set time everyday. 
+  domain: automation
+  source_url: https://github.com/Tralla/climate/Set_Climate_time.yaml
+  input:
+    time_to_set:
+      name: Time
+      description: When should the temperature be set
+      selector:
+        time:
+    climate_entity:
+      name: Thermostat
+      description: Climate entity which will get the temperature update
+      selector:
+        entity:
+          domain: climate
+    temp_to_set:
+      name: Temperature
+      description: Temperature to set on defined time
+      default: 19
+      selector:
+        number:
+          min: 10
+          max: 30
+          unit_of_measurement: degrees
+          step: 0.5
+
+trigger:
+  - platform: time
+    at: !input time_to_set
+
+mode: single
+
+action:
+  service: climate.set_temperature
+  target: !input climate_entity
+  data:
+    temperature: !input temp_to_set
