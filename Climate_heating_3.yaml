@@ -72,7 +72,7 @@ blueprint:
     time_after:
       name: Time After
       description: After this time the heating turns on, so it's warm in the morning
-      default: 05:30:00
+      default: '05:30:00'
       selector:
         time: {}
     time_before:
