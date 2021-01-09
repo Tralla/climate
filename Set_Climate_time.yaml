@@ -7,6 +7,7 @@ blueprint:
     time_to_set:
       name: Time
       description: When should the temperature be set
+      default: 23:00:00
       selector:
         time:
     climate_entity:
@@ -21,10 +22,11 @@ blueprint:
       default: 19
       selector:
         number:
-          min: 10
+          min: 15
           max: 30
           unit_of_measurement: degrees
           step: 0.5
+          mode: slider
 
 trigger:
   - platform: time
