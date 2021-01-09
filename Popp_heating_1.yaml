@@ -86,17 +86,9 @@ action:
     - condition: time
       before: !input 'time_before'
       after: !input 'time_after'
-    - condition: or
-      conditions:
-      - condition: state
-        entity_id: !input 'person1'
-        state: home
-      - condition: state
-        entity_id: !input 'person2'
-        state: home
-      - condition: state
-        entity_id: !input 'person3'
-        state: home
+    - condition: state
+      entity_id: !input 'person1'
+      state: home
     sequence:
     - service: climate.set_temperature
       data:
