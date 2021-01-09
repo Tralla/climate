@@ -9,7 +9,7 @@ blueprint:
       description: When should the temperature be set
       default: 23:00:00
       selector:
-        time:
+        time: {}
     climate_entity:
       name: Thermostat
       description: Climate entity which will get the temperature update
