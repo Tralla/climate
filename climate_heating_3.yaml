@@ -59,8 +59,8 @@ blueprint:
           max: 25.0
           step: 1.0
           mode: slider
-    set_temp_night_out:
-      name: Temperature Target
+    set_temp_out:
+      name: Temperature Out Target
       description: Set this temperature at night or when noone is home.
       default: 18
       selector:
@@ -123,5 +123,5 @@ action:
     data:
       entity_id: !input 'heating'
       hvac_mode: heat
-      temperature: '{{ set_temp_night_out }}'
+      temperature: '{{ set_temp_out }}'
 mode: single
