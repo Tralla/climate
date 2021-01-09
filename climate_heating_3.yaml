@@ -120,8 +120,8 @@ action:
         temperature: '{{ set_temp }}'
   default:
   - service: climate.set_temperature
-      data:
-        entity_id: !input 'heating'
-        hvac_mode: heat
-        temperature: '{{ set_temp_night_out }}'
+    data:
+      entity_id: !input 'heating'
+      hvac_mode: heat
+      temperature: '{{ set_temp_night_out }}'
 mode: single
