@@ -85,6 +85,7 @@ blueprint:
   source_url: https://github.com/Tralla/climate/blob/main/climate_heating_3.yaml
 variables:
   set_temp: !input 'set_temp'
+  set_temp_out: !input 'set_temp_out'
 trigger:
 - platform: homeassistant
   event: start
