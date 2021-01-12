@@ -10,9 +10,9 @@ blueprint:
       default: '23:00:00'
       selector:
         time: {}
-    climate_entity:
-      name: Thermostat
-      description: Climate entity which will get the temperature update
+    heating:
+      name: Climate Device
+      description: The climate device to use.
       selector:
         entity:
           domain: climate
@@ -39,6 +39,6 @@ mode: single
 
 action:
   - service: climate.set_temperature
-    target: !input climate_entity
+    target: !input heating
     data:
       temperature: !input temp_to_set
