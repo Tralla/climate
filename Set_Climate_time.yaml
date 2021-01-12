@@ -37,8 +37,9 @@ variables:
   
 action:
   - service: climate.set_temperature
-    target: !input heating
     data:
-      temperature: !input temp_to_set
-
+      entity_id: !input 'heating'
+      hvac_mode: heat
+      temperature: '{{ temp_to_set }}'
+      
 mode: single
