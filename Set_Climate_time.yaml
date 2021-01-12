@@ -35,10 +35,10 @@ trigger:
 variables:
   temp_to_set: !input 'temp_to_set'
   
-mode: single
-
 action:
   - service: climate.set_temperature
     target: !input heating
     data:
       temperature: !input temp_to_set
+
+mode: single
