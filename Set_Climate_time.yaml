@@ -33,7 +33,7 @@ trigger:
     at: !input time_to_set
 
 variables:
-  set_temp: !input 'set_to_temp'
+  temp_to_set: !input 'temp_to_set'
   
 mode: single
 
