@@ -32,6 +32,9 @@ trigger:
   - platform: time
     at: !input time_to_set
 
+variables:
+  set_temp: !input 'set_to_temp'
+  
 mode: single
 
 action:
