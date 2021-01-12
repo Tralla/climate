@@ -38,7 +38,7 @@ variables:
 mode: single
 
 action:
-  service: climate.set_temperature
-  target: !input climate_entity
-  data:
-    temperature: !input temp_to_set
+  - service: climate.set_temperature
+    target: !input climate_entity
+    data:
+      temperature: !input temp_to_set
