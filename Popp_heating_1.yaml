@@ -32,7 +32,7 @@ blueprint:
         number:
           min: 15.0
           max: 25.0
-          step: 1.0
+          step: 0.5
           mode: slider
     set_temp:
       name: Temperature Target
@@ -42,7 +42,7 @@ blueprint:
         number:
           min: 15.0
           max: 25.0
-          step: 1.0
+          step: 0.5
           mode: slider
     set_temp_out:
       name: Temperature Out Target
@@ -52,12 +52,12 @@ blueprint:
         number:
           min: 15.0
           max: 25.0
-          step: 1.0
+          step: 0.5
           mode: slider
     time_after:
       name: Time After
       description: After this time the heating turns on, so it's warm in the morning
-      default: 05:30:00
+      default: '05:30:00'
       selector:
         time: {}
     time_before:
@@ -70,6 +70,7 @@ blueprint:
   source_url: https://github.com/Tralla/climate/blob/main/Popp_heating_1.yaml
 variables:
   set_temp: !input 'set_temp'
+  set_temp_out: !input 'set_temp_out'
 trigger:
 - platform: homeassistant
   event: start
